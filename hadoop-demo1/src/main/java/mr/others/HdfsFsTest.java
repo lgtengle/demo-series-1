@@ -1,5 +1,6 @@
-package mr;
+package mr.others;
 
+import mr.others.HdfsUtils;
 import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;

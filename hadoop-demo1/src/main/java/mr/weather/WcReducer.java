@@ -18,9 +18,15 @@ public class WcReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
         int sum = 0;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
         for (IntWritable i : values) {
-            sum = sum + i.get();
+            if (max<i.get())
+                max = i.get();
+            /*if (i.get()<min)
+                min = i.get();*/
         }
-        context.write(key, new IntWritable(sum));
+        context.write(key, new IntWritable(max));
+        //context.write(key, new IntWritable(min));
     }
 }

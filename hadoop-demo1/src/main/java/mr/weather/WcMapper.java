@@ -19,11 +19,24 @@ import java.io.IOException;
  */
 
 public class WcMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+
+    static int MISSING = 9999;
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        String[] words = StringUtils.split(value.toString(), ' ');
-        for (String w : words) {
-            context.write(new Text(w), new IntWritable(1));
+        String line = value.toString();
+        if (!line.startsWith("STN")){
+            try {
+                String[] words = line.split("\\s+");
+                //if (!words[17].endsWith("*")){
+                    String max = words[17].substring(0, words[17].lastIndexOf("."));
+                    int temp = Integer.parseInt(max);
+                    if (temp != MISSING)
+                        context.write(new Text(words[2].substring(0,4)), new IntWritable(Integer.parseInt(max)));
+                //}
+            }catch (Exception e){
+                e.printStackTrace();
+                //System.out.println(line);
+            }
         }
     }
 }

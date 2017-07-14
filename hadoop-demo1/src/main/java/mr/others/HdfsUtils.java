@@ -1,4 +1,4 @@
-package mr;
+package mr.others;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
