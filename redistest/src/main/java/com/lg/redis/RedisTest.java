@@ -1,4 +1,4 @@
-package com.tengle.hadoop.redis;
+package com.lg.redis;
 
 import org.apache.log4j.Logger;
 import redis.clients.jedis.HostAndPort;

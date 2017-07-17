@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.tengle.hadoop.redis.RedisApp</mainClass>
+                  <mainClass>com.lg.redis.RedisApp</mainClass>
                 </transformer>
               </transformers>
             </configuration>

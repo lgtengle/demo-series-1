@@ -9,5 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hadoop-demo1</artifactId>
+    <groupId>com.lg</groupId>
+    <artifactId>javademo</artifactId>
+
+
 </project>
