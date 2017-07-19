@@ -8,7 +8,7 @@ import java.util.zip.GZIPInputStream;
 
 /**
  * <p>
- * description: 解压天气数据
+ * description: 解压合并天气数据
  * </p>
  * Created on 2017/7/13 16:30
  *
