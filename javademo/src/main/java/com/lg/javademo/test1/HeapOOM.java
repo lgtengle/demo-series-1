@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * <p>
- * description:
+ * description: 测试Java堆内存溢出
  * </p>
  * Created on 2017/7/19 11:52
  *
