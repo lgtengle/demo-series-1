@@ -76,7 +76,7 @@ public class WordCount {
         }
     }
     public static void main(String[] args) throws Exception {
-        /*deleteOutput(HADOOP_HOME + "/output");
+        deleteOutput(HADOOP_HOME + "/output");
         //System.setProperty("hadoop.home.dir", HADOOP_HOME);
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf, "word count");
@@ -93,7 +93,7 @@ public class WordCount {
 
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
-        System.exit(job.waitForCompletion(true) ? 0 : 1);*/
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
         String s = "010010 99999  19890101    31.3  8    29.9  8  1000.6  8  9999.9  0    7.2  8   13.6  8   28.9   47.0    37.4    21.6   0.20E 999.9  111000";
         /*StringTokenizer st = new StringTokenizer(s);
         while (st.hasMoreTokens()) {

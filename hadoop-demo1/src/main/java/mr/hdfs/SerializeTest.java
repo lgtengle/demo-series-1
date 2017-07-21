@@ -1,7 +1,6 @@
 package mr.hdfs;
 
 import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 
 import java.io.*;
@@ -42,9 +41,4 @@ public class SerializeTest {
         return bytes;
     }
 
-    public static void text(){
-        Text t = new Text();
-        t.getBytes();
-        t.getLength()
-    }
 }

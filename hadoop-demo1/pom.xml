@@ -29,7 +29,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>mr.hdfs.URLCat</mainClass>
+                                    <mainClass>mr.taxi.TaxiMapReduce</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
