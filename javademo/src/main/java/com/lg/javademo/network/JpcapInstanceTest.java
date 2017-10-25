@@ -1,4 +1,4 @@
-package com.lg.network;
+package com.lg.javademo.network;
 
 /**
  * <p>

@@ -13,6 +13,13 @@
         <module>hadoop-demo1</module>
         <module>javademo</module>
         <module>spark-demo1</module>
+        <module>cas-client-demo</module>
+        <module>cas-myapp</module>
+        <module>import-data</module>
+        <module>mintaka-customflow</module>
+        <module>spring-demo</module>
+        <module>mybatis-demo</module>
+        <module>framework-demo</module>
     </modules>
 
 

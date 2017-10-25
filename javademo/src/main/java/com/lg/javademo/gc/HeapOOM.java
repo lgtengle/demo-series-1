@@ -1,4 +1,4 @@
-package com.lg.javademo.test1;
+package com.lg.javademo.gc;
 
 import java.util.ArrayList;
 import java.util.List;

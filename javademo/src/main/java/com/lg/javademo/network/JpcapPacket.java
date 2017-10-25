@@ -1,4 +1,4 @@
-package com.lg.network;
+package com.lg.javademo.network;
 
 import jpcap.JpcapCaptor;
 import jpcap.JpcapSender;
@@ -82,7 +82,7 @@ public class JpcapPacket {
                     default:
                         break;
                 }
-                System.out.println("协议：" + protocol);
+                /*System.out.println("协议：" + protocol);
                 System.out.println("源IP " + ip.src_ip.getHostAddress());
                 System.out.println("地址类型："+ip.src_ip.getClass().getName());
                 System.out.println("目的IP " + ip.dst_ip.getHostAddress());
@@ -92,7 +92,7 @@ public class JpcapPacket {
 
                 JpcapSender jpcapSenderInstance = jpcap.getJpcapSenderInstance();
                 jpcapSenderInstance.sendPacket(new Packet());
-                System.out.println("----------------------------------------------");
+                System.out.println("----------------------------------------------");*/
             }
         }
 

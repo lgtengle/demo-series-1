@@ -1,6 +1,5 @@
-package com.lg.network;
+package com.lg.javademo.network;
 
-import jpcap.JpcapSender;
 import jpcap.NetworkInterface;
 import jpcap.PacketReceiver;
 import jpcap.packet.Packet;

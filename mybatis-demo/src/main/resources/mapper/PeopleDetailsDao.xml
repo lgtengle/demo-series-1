@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lg.PeopleDetailsDao">
+
+
+    <select id="getDetails" resultType="PeopleDetails" >
+        select  cgi, create_time, realtime_people_details from f_hx_api_people_details
+        where  create_time &gt;= #{startTime} and create_time &lt;#{endTime}
+         and cgi in('169947-6','169947-8','169947-9','169410-1','169410-2','169410-3','172220-2','172220-3','691194-3','691194-6','691194-9','42301-61871','42301-61872','42301-61873','42301-7131','42301-7132','42301-7133','42301-32621','9466-35332','680796-1','680796-2','680796-3','680796-5','680796-6','680796-8','680796-9','169809-1','169809-2','169809-3','169809-4','169809-5','169809-6','169809-7','169809-8','169809-9','169947-2','169947-3','169947-5')
+    </select>
+
+</mapper>
