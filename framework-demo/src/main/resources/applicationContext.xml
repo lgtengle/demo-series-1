@@ -28,7 +28,9 @@
     <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
         <property name="caches">
             <set>
-                <bean class="com.lg.cache.MyCache"/>
+                <bean class="com.lg.cache.MyCache">
+                    <property name="validTime" value="5" />
+                </bean>
             </set>
         </property>
     </bean>
