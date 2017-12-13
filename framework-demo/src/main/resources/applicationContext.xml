@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans default-lazy-init="true"
+<beans
        xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cache="http://www.springframework.org/schema/cache"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context.xsd">
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/cache
+       http://www.springframework.org/schema/cache/spring-cache.xsd">
 
     <context:component-scan base-package="com.lg.spring" />
 
@@ -16,4 +19,23 @@
     </bean>
 
     <bean id="testBean" class="com.lg.spring.TestBean"></bean>
+
+
+    <context:component-scan base-package="com.lg.cache" />
+
+    <cache:annotation-driven cache-manager="cacheManager" />
+
+    <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+        <property name="caches">
+            <set>
+                <bean class="com.lg.cache.MyCache"/>
+            </set>
+        </property>
+    </bean>
+
+    <!--<bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache-setting.xml"></property>
+    </bean>
+-->
+
 </beans>

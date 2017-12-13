@@ -1,6 +1,9 @@
 package com.lg.javademo.thread;
 
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * <p>
  * description:
@@ -82,5 +85,24 @@ public class ExcutorDemo {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static void main(String[] args){
+        ExecutorService service = Executors.newCachedThreadPool();
+        service.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName());
+            }
+        });
+    }
+    public void testThreadName(){
+        ExecutorService service = Executors.newCachedThreadPool();
+        service.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName());
+            }
+        });
     }
 }

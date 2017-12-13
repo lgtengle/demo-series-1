@@ -1,7 +1,9 @@
 package com.lg.javademo.other;
 
 
-import java.util.Arrays;
+import org.junit.Test;
+
+import java.util.*;
 
 
 /**
@@ -40,5 +42,24 @@ public class OtherTest {
 
 
     }
+
+
+    @Test
+    public void testArray(){
+        int[][] r = new int[3][3];
+        for (int i = 0; i < r.length; i++) {
+            for (int j = 0; j < r[0].length; j++) {
+                r[i][j]++;
+            }
+        }
+        for (int i = 0; i < r.length; i++) {
+            for (int j = 0; j < r[0].length; j++) {
+                System.out.print(r[i][j]);
+            }
+            System.out.println();
+        }
+
+    }
+
 
 }

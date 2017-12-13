@@ -1,9 +1,9 @@
 package com.lg.javademo.collections;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import org.junit.Test;
+
+import java.util.*;
 
 /**
  * <p>
@@ -15,16 +15,12 @@ import java.util.List;
  */
 public class ListDemo {
 
-    public static void main(String[] args){
-        testRemove();
-    }
 
-
-    public static List<String> getLists(){
+    public List<String> getLists(){
         List<String> strings = Collections.synchronizedList(new ArrayList<String>());
-        strings.add("1");
-        strings.add("2");
-        strings.add("3");
+        strings.add("11111");
+        strings.add("22222");
+        strings.add("33333");
         return strings;
     }
 
@@ -40,13 +36,22 @@ public class ListDemo {
         }
     }
 
-    public static void subListTest(){
+    /**
+     * 测试截取List子集合
+     */
+    @Test
+    public void subListTest(){
         List<String> lists = getLists();
-        List<String> strings = lists.subList(0, 1);
-        System.out.println(strings.size());
-        System.out.println(lists.subList(1,2).size());
+        List<String> strings = lists.subList(0, 2);
+        lists = strings;
+        System.out.println(lists);
+        //System.out.println(lists.subList(1,2).size());
     }
 
+    /**
+     * 测试List转换成array
+     */
+    @Test
     public void testToArray(){
         List<ContentDemo> cd = new ArrayList<>();
         cd.add(new ContentDemo(1));
@@ -63,7 +68,11 @@ public class ListDemo {
         System.out.println(rr.length);
     }
 
-    public static void testRemove(){
+    /**
+     * 测试移除List中的元素
+     */
+    @Test
+    public void testRemove(){
         List<ContentDemo> cd = new ArrayList<>();
         cd.add(new ContentDemo(1));
         cd.add(new ContentDemo(3));
@@ -79,5 +88,24 @@ public class ListDemo {
         System.out.println(cd.size());*/
     }
 
+
+    @Test
+    public void testSort(){
+        List<Integer> list = new ArrayList<>();
+        list.add(5);
+        list.add(2);
+        list.add(6);
+        Collections.sort(list, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2 - o1;
+            }
+        });
+        System.out.println(list);
+    }
+
+    public void main(){
+        //Collection;
+    }
 
 }
