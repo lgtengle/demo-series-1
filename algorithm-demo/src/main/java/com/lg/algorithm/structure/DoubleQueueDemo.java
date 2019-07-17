@@ -1,9 +1,12 @@
 package com.lg.algorithm.structure;
 
 
+import com.lg.algorithm.structure.entity.DNode;
+
 /**
  * <p>
  * description: 双向链表实现 ： 需要维护首节点和尾节点，采用尾插入的方式
+ * 删除采用从头部遍历的方式来查找元素
  *
  * </p>
  * Created on 2019/7/15 11:17
@@ -16,17 +19,6 @@ public class DoubleQueueDemo {
 
     private DNode tail;
 
-    class DNode{
-        public Object val;
-
-        public DNode next;
-
-        public DNode pre;
-
-        public DNode(Object val) {
-            this.val = val;
-        }
-    }
 
     public void add(Object val){
         DNode dNode = new DNode(val);
