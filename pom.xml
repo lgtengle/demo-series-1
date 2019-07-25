@@ -21,6 +21,7 @@
         <module>mybatis-demo</module>
         <module>framework-demo</module>
         <module>javaweb</module>
+        <module>algorithm-demo</module>
     </modules>
 
 
